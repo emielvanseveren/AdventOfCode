@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-
 func main() {
 	input:= []int{
 		261, 1773, 1839, 1551, 1781, 1276, 1372, 16681823, 1870, 1672, 1821, 1327, 1902, 1949, 1389, 1720, 1437, 1716, 1360, 1893, 1410, 1881,
@@ -15,19 +14,18 @@ func main() {
 		1393, 1850, 1898, 1960, 1673, 1736, 1901, 1806, 1768, 1670, 1989, 1214, 1851, 1715, 1461, 1277, 951, 1482, 1464, 1883, 1976, 1602,
 		1606, 1258, 1801, 1593, 1332, 1386, 1309, 1388, 1762, 1533, 1805, 1462, 375, 1555, 1357, 1578, 1552, 1473, 1834,1262, 1466, 1925,
 		1955, 1575, 1975, 1964, 1440, 1667, 1922, 1454, 1813, 1968, 1836, 1982, 1326, 1811, 900, 1588, 1529, 1997, 1345, 1859, 1458, 1764,
-		1509, 1397, 1237, 1627, 1564, 1814, 1842, 1679, 1289, 1957, 1819, 801, 1350, 1841, 1803, 1718, 1966, 1272, 1636, 1352, 1496, 1455, 1488};
-	/* part 1 */
+		1509, 1397, 1237, 1627, 1564, 1814, 1842, 1679, 1289, 1957, 1819, 801, 1350, 1841, 1803, 1718, 1966, 1272, 1636, 1352, 1496, 1455, 1488}
+
+	// Part 1
 	n1,n2 := findAdditionOf2020(input)
 	fmt.Printf("Num 1: %d \n Num 2: %d \n",n1, n2 )
 	fmt.Printf("Multiply to: %d", n1*n2)
 
-
-	/* part 2 */
+	// Part 2
 	o1,o2,o3 := findAddition2020Of3Numbers(input)
 	fmt.Printf("Num 1: %d \n Num 2: %d \n Num 3: %d \n",o1, o2, o3 )
 	fmt.Printf("Multiply to: %d", o1*o2*o3)
 }
-
 
 func findAdditionOf2020(n []int) (int,int){
 	for i:=0;i<len(n);i++ {
@@ -37,8 +35,7 @@ func findAdditionOf2020(n []int) (int,int){
 			}
 		}
 	}
-	// result not found
-	return 0, 0;
+	return 0, 0 // Result not found
 }
 
 func findAddition2020Of3Numbers(n []int)(int, int, int){
@@ -53,6 +50,5 @@ func findAddition2020Of3Numbers(n []int)(int, int, int){
 			}
 		}
 	}
-	// result not found
-	return 0,0,0
+	return 0,0,0 // Result not found
 }
