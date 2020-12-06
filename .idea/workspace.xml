@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f350bc1-7431-4d6e-ae76-3ccaf29ee8fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/5/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +17,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="$USER_HOME$/sdk/go1.14" />
+  <component name="GOROOT" path="$PROJECT_DIR$/../../go1.15.5" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -112,5 +111,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1414" y="1925" width="412" height="144" key="#GOROOT" timestamp="1607232195765">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state x="1414" y="1925" width="412" height="144" key="#GOROOT/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607232195765" />
   </component>
 </project>

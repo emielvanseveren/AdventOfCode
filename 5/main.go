@@ -61,7 +61,7 @@ func getSeatIds() []int {
 
 
 func getRowCount(rowInfo string) int {
-		// max 127
+	// max 127
 	max := 127
 	min := 0
 
@@ -83,8 +83,8 @@ func getRowCount(rowInfo string) int {
 				max -= int(math.Round(float64(max - min) / 2))
 			}
 		}
-		
-		
+
+
 	}
 	return min
 }
