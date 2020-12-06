@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f350bc1-7431-4d6e-ae76-3ccaf29ee8fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5/assignment.md" beforeDir="false" afterPath="$PROJECT_DIR$/5/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6/input" beforeDir="false" afterPath="$PROJECT_DIR$/6/input" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/6/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (3)">
+  <component name="RunManager" selected="Go Build.go build main.go (4)">
     <configuration name="go build AdventOfCode/1" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode" />
       <working_directory value="$PROJECT_DIR$" />
@@ -79,22 +82,22 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build main.go (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/1/main.go" />
+      <filePath value="$PROJECT_DIR$/6/main.go" />
       <package value="AdventOfCode" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go (4)" />
         <item itemvalue="Go Build.go build main.go (3)" />
         <item itemvalue="Go Build.go build main.go (2)" />
         <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build AdventOfCode/1" />
-        <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -117,5 +120,41 @@
       <screen x="660" y="1440" width="1920" height="1080" />
     </state>
     <state x="1414" y="1925" width="412" height="144" key="#GOROOT/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607232195765" />
+    <state width="1866" height="97" key="GridCell.Tab.0.bottom" timestamp="1607237280161">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="97" key="GridCell.Tab.0.bottom/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607237280161" />
+    <state width="1866" height="97" key="GridCell.Tab.0.center" timestamp="1607237280161">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="97" key="GridCell.Tab.0.center/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607237280161" />
+    <state width="1866" height="97" key="GridCell.Tab.0.left" timestamp="1607237280161">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="97" key="GridCell.Tab.0.left/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607237280161" />
+    <state width="1866" height="97" key="GridCell.Tab.0.right" timestamp="1607237280161">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="97" key="GridCell.Tab.0.right/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607237280161" />
+    <state width="1866" height="272" key="GridCell.Tab.1.bottom" timestamp="1607236627002">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="272" key="GridCell.Tab.1.bottom/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607236627002" />
+    <state width="1866" height="272" key="GridCell.Tab.1.center" timestamp="1607236627001">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="272" key="GridCell.Tab.1.center/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607236627001" />
+    <state width="1866" height="272" key="GridCell.Tab.1.left" timestamp="1607236627001">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="272" key="GridCell.Tab.1.left/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607236627001" />
+    <state width="1866" height="272" key="GridCell.Tab.1.right" timestamp="1607236627002">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state width="1866" height="272" key="GridCell.Tab.1.right/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607236627002" />
+    <state x="1234" y="1685" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607234991277">
+      <screen x="660" y="1440" width="1920" height="1080" />
+    </state>
+    <state x="1234" y="1685" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/660.1440.1920.1080/0.0.3440.1440@660.1440.1920.1080" timestamp="1607234991277" />
   </component>
 </project>
