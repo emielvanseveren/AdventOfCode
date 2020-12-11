@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	file, err := os.Open("./2/input")
+	file, err := os.Open("./02/input")
 
 	if err != nil {
 		log.Fatal("ERROR: %s", err)

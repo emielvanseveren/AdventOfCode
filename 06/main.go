@@ -40,9 +40,9 @@ func (s *Set) Intersect(s2 *Set) *Set {
 }
 
 func part1(){
-	file, err := os.Open("./6/input")
+	file, err := os.Open("./06/input")
 
-	if err != nil {log.Fatal("ERROR: %s", err)}
+	if err != nil {log.Fatalf("ERROR: %s", err)}
 	defer file.Close()
 
 	s := bufio.NewScanner(file)

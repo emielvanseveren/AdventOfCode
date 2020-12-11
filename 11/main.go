@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"image"
-	/* Image contains a POINT (x,y) great for grid usage.
+	/* Image contains a POINT (x,y) with vector sugar methods.
 	Which also has handy vector functions such as add, mul...
 	https://golang.org/pkg/image/#Point */
 	"io/ioutil"
@@ -72,7 +72,7 @@ func head(seats map[image.Point]rune, adjacent adjacent, maxAdj int) (occupied i
 			next[p] = r
 			diff = diff || next[p] != seats[p] // should go till no more changes.
 		}
-		seats = next //
+		seats = next
 	}
 	return
 }

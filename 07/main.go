@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	input, _ := ioutil.ReadFile("./7/input")
+	input, _ := ioutil.ReadFile("./07/input")
 
 	bags := map[string]map[string]int{}
 	for _, s := range strings.Split(strings.TrimSpace(string(input)), "\n") {

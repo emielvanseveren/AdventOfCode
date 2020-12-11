@@ -7,8 +7,8 @@ import (
 	"strings"
 )
 
+/* make this using channels */
 func main() {
-
 	input, _ := ioutil.ReadFile("./10/input")
 
 	// strings to numbers

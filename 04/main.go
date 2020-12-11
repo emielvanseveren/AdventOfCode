@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	file, err := os.Open("./4/input")
+	file, err := os.Open("./04/input")
 
 	if err != nil { log.Fatalf("ERROR: %s", err)}
 	defer file.Close()

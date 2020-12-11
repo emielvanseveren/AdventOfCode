@@ -39,7 +39,7 @@ func getHighestSeatId(seatIds []int) int{
 }
 
 func getSeatIds() []int {
-	file, err := os.Open("./5/input")
+	file, err := os.Open("./05/input")
 	var seatIds []int
 
 	if err != nil {
