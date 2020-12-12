@@ -30,7 +30,6 @@ func main() {
 }
 
 func part2(num int, nums []int) (min, max int){
-
 	start, end := 0, 1
 
 	sum := nums[start] + nums[end]

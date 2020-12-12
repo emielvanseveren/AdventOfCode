@@ -7,6 +7,12 @@ import (
 	"strings"
 )
 
+
+/* NOT SOLVED
+	this is a great example to make use of concurrency (channels).
+	I have no experience with channels. So i'm looking into it.
+*/
+
 /* make this using channels */
 func main() {
 	input, _ := ioutil.ReadFile("./10/input")
