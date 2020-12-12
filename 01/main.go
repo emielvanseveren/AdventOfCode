@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	input:= []int{
@@ -31,7 +29,7 @@ func findAdditionOf2020(n []int) (int,int){
 	for i:=0;i<len(n);i++ {
 		for j:=0;j<len(n);j++{
 			if n[i] + n[j] == 2020 {
-				return n[i], n[j];
+				return n[i], n[j]
 			}
 		}
 	}

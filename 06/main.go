@@ -1,10 +1,9 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"log"
-	"os"
+	"io/ioutil"
+	"strings"
 )
 
 type Set struct {
@@ -40,50 +39,36 @@ func (s *Set) Intersect(s2 *Set) *Set {
 }
 
 func part1(){
-	file, err := os.Open("./06/input")
+	input, _ := ioutil.ReadFile("./06/input")
+	c, g:= 0, NewSet() 	// Count, Group set
 
-	if err != nil {log.Fatalf("ERROR: %s", err)}
-	defer file.Close()
-
-	s := bufio.NewScanner(file)
-	g:= NewSet() 	// Group set
-	c:=0 			// Total count
-
-	for s.Scan() {
-		line := s.Text()
-
+	for _, l := range strings.Split(string(input), "\n") {
 		// A new group is identified by an empty line.
-		if line == "" {
+		if l == "" {
 			c+= g.Size()
 			g.Clear()
 			continue
 		}
 
-		for i:=0;i<len(line);i++ {
-			g.Add(line[i:i+1])
+		for i:=0;i<len(l);i++ {
+			g.Add(l[i:i+1])
 		}
 	}
 	// Last empty line is not parsed by scanner.
 	c += g.Size()
-	fmt.Printf("Total count of questions answered by a group (without doubles per question): %d \n", c)
-}
+	fmt.Printf("Total count of questions answered by a group (without doubles per question): %d\n", c)
+	}
 
 func part2(){
-	file, err := os.Open("./6/input")
-	if err != nil {log.Fatal("ERROR: %s", err)}
-	defer file.Close()
+	input,_ := ioutil.ReadFile("./06/input")
 
-	s := bufio.NewScanner(file)
-	g:= NewSet()	// Group set
-	u:= NewSet()	// User set
-	c:=0			// Total count
-	gc:= 0 			// Group count
+	u, g:= NewSet(), NewSet()	// User set, Group set
+	c, gc := 0, 0			// Total count, Group count
 
-	for s.Scan() {
-		line := s.Text()
+	for _, l := range strings.Split(string(input), "\n") {
 
 		// A new group is identified by an empty line
-		if line == "" {
+		if l == "" {
 			c+= g.Size()
 			g.Clear()
 			gc =0
@@ -95,11 +80,11 @@ func part2(){
 		u.Clear()
 		initGroupSize := g.Size()
 
-		for i:=0;i<len(line);i++ {
+		for i:=0;i<len(l);i++ {
 			if gc == 1 { // First member of group
-				g.Add(line[i:i+1])
+				g.Add(l[i:i+1])
 			} else {
-				u.Add(line[i:i+1])
+				u.Add(l[i:i+1])
 			}
 		}
 		if initGroupSize != 0 {

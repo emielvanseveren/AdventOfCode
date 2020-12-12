@@ -1,29 +1,20 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"log"
-	"os"
+	"io/ioutil"
+	"regexp"
 	"strconv"
 	"strings"
-	"regexp"
 )
 
 func main() {
-	file, err := os.Open("./04/input")
+	input,_ := ioutil.ReadFile("./04/input")
+	validPassports, amountOfPassports, passport := 0, 0, make(map[string]string)
 
-	if err != nil { log.Fatalf("ERROR: %s", err)}
-	defer file.Close()
-
-	s := bufio.NewScanner(file)
-	validPassports := 0
-	amountOfPassports := 0
-	passport := make(map[string]string)
-
-	for s.Scan() {
-		if s.Text() !="" {
-			fields := strings.Split(s.Text(), " ")
+	for _, l := range strings.Split(string(input), "\n"){
+		if l != "" {
+			fields := strings.Split(l, " ")
 			for i:=0;i<len(fields);i++ {
 				f :=strings.Split(fields[i], ":")
 				passport[f[0]] = f[1]
@@ -34,12 +25,8 @@ func main() {
 			passport = make(map[string]string) // clear map
 		}
 	}
-	// ATTENTION: last empty line is not scanned by scanner.
-		amountOfPassports++
-		validPassports	+= isValid(passport)
-
 	fmt.Printf("Amount of passports: %d\n", amountOfPassports)
-	fmt.Printf("There are %d valid passports.\n", validPassports)
+	fmt.Printf("valid passports: %d\n", validPassports)
 }
 
 func isValid(passport map[string]string) int {
