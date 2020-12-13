@@ -9,7 +9,7 @@ import (
 
 
 /* NOT SOLVED
-	this is a great example to make use of concurrency (channels).
+	this is a great example to make use of concurrency (go func channels).
 	I have no experience with channels. So i'm looking into it.
 */
 
