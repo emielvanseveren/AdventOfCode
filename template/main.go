@@ -1,18 +1,23 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"log"
+	"io/ioutil"
 	"os"
+	"strings"
 )
 
-func main() {
-	file, err := os.Open("./ENTERHERE/input")
-	if err != nil {log.Fatalf("ERROR: %s", err)}
-	defer file.Close()
+func check(err error){
+	panic(err)
+}
 
-	s := bufio.NewScanner(file)
-	for s.Scan() { // read input }
-	fmt.Printf("result")
+func main() {
+	input, err := ioutil.ReadFile("./num/testinput")
+	check(err)
+
+	for _, s := range strings.Split(string(input), "\n"){
+
+	}
+
+	fmt.Println("res", 0)
 }
