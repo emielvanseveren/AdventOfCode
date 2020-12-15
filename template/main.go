@@ -8,7 +8,9 @@ import (
 )
 
 func check(err error){
-	panic(err)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func main() {
