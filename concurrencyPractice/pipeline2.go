@@ -22,7 +22,7 @@ func counter(out chan<- int){ // we put something into the channel
 	}
 	close(out)
 }
-func squarer(in <-chan int, out chan<- int){ // (in) we only get values FROM the channel (the values from the channel are used as input for the squarer function)
+func squarer(in <-chan int, out chan<- int){ // (in = input, for this function, out = output for this func)
 	for v:= range in {
 		out <- v*v
 	}
