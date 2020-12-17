@@ -2,7 +2,7 @@ package util
 
 import "io/ioutil"
 
-func ReadEntireFile(name string) string {
+func ReadFile(name string) string {
 	res, err := ioutil.ReadFile(name)
 	if err != nil {
 		panic(err)
