@@ -5,10 +5,15 @@ import (
 	"strings"
 )
 
+const (
+	activated = true
+	deactivated = false
+)
+
 type Point [4]int
 
 func (p Point) Add(q Point) (r Point) {
-	for i := range p {
+	for i := range p { // xyz(a)
 		r[i] = p[i] + q[i]
 	}
 	return
@@ -17,19 +22,21 @@ func (p Point) Add(q Point) (r Point) {
 func main() {
 	input := util.ReadFile("./17/input") // helper func
 
-	grid := map[Point]rune{} // ('#' or '.')
+	grid := map[Point]bool{} // ('#' = active or '.' = inactive )
 	for y, s := range strings.Fields(input){
 		for x, c := range s {
-			grid[Point{x, y}] = c
+			if c == '#' { grid[Point{x, y}] = activated } else if c == '.' {  grid[Point{x,y}] = deactivated }
 		}
 	}
-	println(run(grid,3))
-	println(run(grid,4))
+
+	// Part 1
+	println(act(grid,3))
+	// Part 2
+	println(act(grid,4)) // 4 dimensions :o
 }
 
-func run(grid map[Point]rune, dimensions int) (count int){
+func act(grid map[Point]bool, dimensions int) (count int){
 	dg := create(dimensions)[1:]
-
 
 	// fill
 	for i := 0; i < 6; i++ {
@@ -39,35 +46,29 @@ func run(grid map[Point]rune, dimensions int) (count int){
 			}
 		}
 
-		new := make(map[Point]rune)
-		for p, r := range grid {
-			neigh := 0
+		new := make(map[Point]bool)
+		for p, isActive := range grid {
+			activeNeighbors := 0
 			for _, d := range dg {
-				if grid[p.Add(d)] == '#' {
-					neigh++
-				}
+				if grid[p.Add(d)] == activated { activeNeighbors++ }
 			}
-
-			if r == '#' && neigh == 2 || neigh == 3 {
-				new[p] = '#'
+			if isActive == activated && activeNeighbors == 2 || activeNeighbors == 3 { // check if neighbors are active
+				new[p] = activated
 			}
 		}
 		grid = new
 	}
 
-	// count result
 	for _, r := range grid {
-		if r == '#' {
-			count++
+		if r == activated {
+			count++ // res
 		}
 	}
 	return
 }
 
 func create(dimensions int) (ds []Point) { // recursive
-	if dimensions == 0 {
-		return []Point{{}}
-	}
+	if dimensions == 0 { return []Point{{}}} // end of loop
 
 	for _, v := range []	int{0,1,-1} {
 		for _, p := range create(dimensions-1){
