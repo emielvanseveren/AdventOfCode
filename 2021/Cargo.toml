@@ -2,7 +2,7 @@
 name = "adventofcode2021"
 version = "0.1.0"
 edition = "2018"
-author="Emiel Van Severen"
+authors= ["Emiel Van Severen <emiel@vanseveren.dev>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
