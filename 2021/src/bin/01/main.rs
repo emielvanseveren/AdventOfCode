@@ -29,7 +29,7 @@ fn number_of_increases_sliding_window(measurements: Vec<u16>) -> u16 {
 
 fn main() {
     // read file to vector
-    let file = File::open("input").expect("file not found");
+    let file = File::open("input.txt").expect("file not found");
     let buf = BufReader::new(file);
 
     let numbers: Vec<u16> = buf

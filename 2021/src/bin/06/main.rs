@@ -41,7 +41,7 @@ fn populate_size(lantern_fish: Vec<usize>, days: u16) -> usize {
 }
 
 fn main() {
-    let mut fish: Vec<usize> = include_str!("input")
+    let mut fish: Vec<usize> = include_str!("input.txt")
         .trim()
         .split(',')
         .map(|i| i.parse().unwrap())
