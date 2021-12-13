@@ -108,11 +108,11 @@ mod tests {
 
     #[test]
     fn test_star_one() {
-        let mut grid: Grid = parse_input("testinput.txt").expect("test input to exist");
+        let mut grid = parse_input("testinput.txt").expect("test input to exist");
         assert_eq!(star_one(&mut grid, 100), 1656);
     }
     fn test_star_two() {
-        let mut grid: Grid = parse_input("testinput.txt").expect("test input  to exist");
+        let mut grid = parse_input("testinput.txt").expect("test input  to exist");
         assert_eq!(star_two(&mut grid), 195);
     }
 }

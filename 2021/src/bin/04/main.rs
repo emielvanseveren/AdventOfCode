@@ -163,9 +163,7 @@ mod tests {
         ];
         let mut bingo = BingoSolver::new(numbers);
         bingo.load_boards("src/bin/04/testinput");
-        let (last_number, board, _) = bingo
-            .get_winning_board()
-            .unwrap("Should still have a winning board");
+        let (last_number, board, _) = bingo.get_winning_board().unwrap();
         assert_eq!(calculate_final_score(last_number, &board), 4512);
     }
     #[test]

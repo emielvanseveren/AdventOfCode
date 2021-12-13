@@ -13,6 +13,7 @@ fn populate(lantern_fish: &mut Vec<usize>, days: u32) {
 }
 
 // Naive method recursive implementation
+#[warn(dead_code)]
 fn populate_recursive(lantern_fish: &mut Vec<usize>, days: u32) {
     if days == 0 {
         return;

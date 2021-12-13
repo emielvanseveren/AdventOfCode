@@ -11,9 +11,11 @@ struct Line {
 }
 
 impl Line {
+    /*
     fn is_straight(&self) -> bool {
         self.start.0 == self.end.0 || self.start.1 == self.end.1
     }
+    */
     fn points(&self) -> impl Iterator<Item = Point> {
         let delta = (
             (self.end.0 - self.start.0).signum(),
@@ -53,9 +55,8 @@ fn parse(input: &str) -> impl Iterator<Item = Line> + '_ {
 }
 
 fn main() {
-    let input = std::fs::read_to_string("input").unwrap();
-
     /*
+    let input = std::fs::read_to_string("input").unwrap();
     let mut points = HashMap::new();
     parse(&input)
         .filter(Line::is_straight)

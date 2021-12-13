@@ -76,7 +76,7 @@ mod tests {
 
     #[test]
     fn test_star_two() {
-        let input = include_str("testinput.txt");
+        let input = include_str!("testinput.txt");
         assert_eq!(star_two(input), 288957);
     }
 }

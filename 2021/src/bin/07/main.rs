@@ -9,7 +9,7 @@ fn star_one(positions: &mut Vec<i32>) -> i32 {
     fuel
 }
 
-fn star_two(positions: Vec<i32>) -> i32 {
+fn star_two(positions: &mut Vec<i32>) -> i32 {
     use std::ops::RangeInclusive;
     let mean = positions.iter().sum::<i32>() / positions.len() as i32;
 
@@ -38,7 +38,7 @@ fn main() {
     let required_fuel = star_one(&mut positions);
     println!("Required fuel: {}", required_fuel);
 
-    let required_fuel = star_two(positions);
+    let required_fuel = star_two(&mut positions);
     println!("Required fuel: {}", required_fuel);
 }
 
@@ -54,6 +54,6 @@ mod tests {
     #[test]
     fn test_star_two() {
         let mut positions: Vec<i32> = vec![16, 1, 2, 0, 4, 2, 7, 1, 2, 14];
-        assert_eq!(star_two(positions), 168);
+        assert_eq!(star_two(&mut positions), 168);
     }
 }
