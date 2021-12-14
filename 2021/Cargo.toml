@@ -11,3 +11,7 @@ plotters = "0.3.1"
 lazy_static = "1.4.0"
 regex="1.5.4"
 anyhow="1.0.51"
+itertools = "0.10.3"
+
+[dev-dependencies]
+criterion = "0.3.1"
