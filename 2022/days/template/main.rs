@@ -1,10 +1,10 @@
 
 fn part_1(){
-    unimplemented!()
+    unimplemented!();
 }
 
 fn part_2() {
-    unimplemented!()
+    unimplemented!();
 }
 
 fn main() {
@@ -16,7 +16,11 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
+    fn part_1_example() {
+        unimplemented!();
+    }
+
+    fn part_1_example() {
         assert_eq!(2 + 2, 4);
     }
 }

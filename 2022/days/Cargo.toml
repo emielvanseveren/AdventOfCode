@@ -5,5 +5,4 @@ edition = "2021"
 authors= ["Emiel Van Severen <emiel@vanseveren.dev>"]
 
 [dependencies]
-util= { path="../util"}
 
