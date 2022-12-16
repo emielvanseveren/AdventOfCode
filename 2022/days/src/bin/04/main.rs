@@ -77,15 +77,16 @@ fn main() {
 mod tests {
     use super::*;
 
-    #[test]
-    fn part_1_example() {
-        let input = "2-4,6-8
+    static INPUT: &str = "2-4,6-8
 2-3,4-5
 5-7,7-9
 2-8,3-7
 6-6,4-6
 2-6,4-8";
-        assert_eq!(part_1(input), 2)
+
+    #[test]
+    fn part_1_example() {
+        assert_eq!(part_1(INPUT), 2)
     }
 
     #[test]
@@ -96,6 +97,6 @@ mod tests {
 2-8,3-7
 6-6,4-6
 2-6,4-8";
-        assert_eq!(part_2(input), 4)
+        assert_eq!(part_2(INPUT), 4)
     }
 }

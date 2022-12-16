@@ -148,10 +148,7 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
-
-    #[test]
-    fn test_both_parts() {
-        let input = "Monkey 0:
+    static INPUT: &str = "Monkey 0:
   Starting items: 79, 98
   Operation: new = old * 19
   Test: divisible by 23
@@ -182,7 +179,13 @@ Monkey 3:
     }
 ";
 
-        assert_eq!(10605, part_1(input));
-        assert_eq!(2713310158, part_2(input));
+    #[test]
+    fn test_part_1_example() {
+        assert_eq!(10605, part_1(INPUT));
+    }
+
+    #[test]
+    fn test_part_2_example() {
+        assert_eq!(2713310158, part_2(INPUT));
     }
 }

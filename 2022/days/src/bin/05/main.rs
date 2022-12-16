@@ -7,7 +7,7 @@ type Stack = VecDeque<Crate>;
 type Stacks = [Stack; STACKS];
 const STACKS: usize = 9;
 
-fn part_1(input: String) -> String {
+fn part_1(input: &str) -> String {
     // only option is Default::default for this??
     let mut stacks: [Stack; STACKS] = Default::default();
 
@@ -54,7 +54,7 @@ fn part_1(input: String) -> String {
     })
 }
 
-fn part_2(input: String) -> String {
+fn part_2(input: &str) -> String {
     // only option is Default::default for this??
     let mut stacks: Stacks = Default::default();
 
@@ -102,17 +102,15 @@ fn part_2(input: String) -> String {
 
 fn main() {
     let input = read_to_string("input.txt").unwrap();
-    println!("part 1: {}", part_1(input.clone()));
-    println!("part 2: {}", part_2(input));
+    println!("part 1: {}", part_1(&input));
+    println!("part 2: {}", part_2(&input));
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    #[test]
-    fn part_1_example() {
-        let input = "    [D]    
+    static INPUT: &str = "    [D]    
 [N] [C]    
 [Z] [M] [P]
  1   2   3 
@@ -121,21 +119,14 @@ move 1 from 2 to 1
 move 3 from 1 to 3
 move 2 from 2 to 1
 move 1 from 1 to 2";
-        assert_eq!(String::from("CMZ"), part_1(input.to_string()));
+
+    #[test]
+    fn part_1_example() {
+        assert_eq!(String::from("CMZ"), part_1(INPUT));
     }
 
     #[test]
     fn part_2_example() {
-        let input = "    [D]    
-[N] [C]    
-[Z] [M] [P]
- 1   2   3 
-
-move 1 from 2 to 1
-move 3 from 1 to 3
-move 2 from 2 to 1
-move 1 from 1 to 2";
-
-        assert_eq!(String::from("MCD"), part_2(input.to_string()));
+        assert_eq!(String::from("MCD"), part_2(INPUT));
     }
 }

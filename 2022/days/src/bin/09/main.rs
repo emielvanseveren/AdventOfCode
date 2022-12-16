@@ -125,9 +125,7 @@ fn main() {
 mod tests {
     use super::*;
 
-    #[test]
-    fn part_1_example() {
-        let input = "R 4
+    static INPUT_A: &str = "R 4
 U 4
 L 3
 D 1
@@ -136,19 +134,13 @@ D 1
 L 5
 R 2";
 
-        assert_eq!(13, part_1(input));
+    #[test]
+    fn part_1_example_a() {
+        assert_eq!(13, part_1(INPUT_A));
     }
     #[test]
-    fn part_2_example() {
-        let input = "R 4
-U 4
-L 3
-D 1
-R 4
-D 1
-L 5
-R 2";
-        assert_eq!(1, part_2(input));
+    fn part_2_example_a() {
+        assert_eq!(1, part_2(INPUT_A));
     }
 
     #[test]

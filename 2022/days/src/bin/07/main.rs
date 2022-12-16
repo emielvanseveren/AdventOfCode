@@ -129,9 +129,7 @@ fn main() {
 mod tests {
     use super::*;
 
-    #[test]
-    fn test_both_parts() {
-        let input = "$ cd /
+    static INPUT: &str = "$ cd /
 $ ls
 dir a
 14848514 b.txt
@@ -155,7 +153,13 @@ $ ls
 5626152 d.ext
 7214296 k";
 
-        assert_eq!(95437, part_1(input));
-        assert_eq!(24933642, part_2(input));
+    #[test]
+    fn test_example_part_1() {
+        assert_eq!(95437, part_1(INPUT));
+    }
+
+    #[test]
+    fn test_example_part_2() {
+        assert_eq!(24933642, part_2(INPUT));
     }
 }

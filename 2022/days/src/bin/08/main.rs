@@ -171,23 +171,19 @@ fn main() {
 mod tests {
     use super::*;
 
-    #[test]
-    fn part_1_example() {
-        let input = "30373
+    static INPUT: &str = "30373
 25512
 65332
 33549
 35390";
-        assert_eq!(21, part_1(input));
+
+    #[test]
+    fn part_1_example() {
+        assert_eq!(21, part_1(INPUT));
     }
 
     #[test]
     fn part_2_example() {
-        let input = "30373
-25512
-65332
-33549
-35390";
-        assert_eq!(8, part_2(input));
+        assert_eq!(8, part_2(INPUT));
     }
 }

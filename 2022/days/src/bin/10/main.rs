@@ -100,9 +100,7 @@ fn main() {
 mod tests {
     use super::*;
 
-    #[test]
-    fn part_1_example() {
-        let input = "addx 15
+    static INPUT: &str = "addx 15
 addx -11
 addx 6
 addx -3
@@ -249,7 +247,10 @@ noop
 noop
 noop
 ";
-        let result = part_1(input);
+
+    #[test]
+    fn part_1_example() {
+        let result = part_1(INPUT);
         assert_eq!(13140, result);
     }
 }
