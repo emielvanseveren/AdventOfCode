@@ -1,3 +1,4 @@
+use std::convert::From;
 use std::fs::read_to_string;
 
 enum Match {
@@ -6,7 +7,7 @@ enum Match {
     Win,
 }
 
-impl std::convert::From<u8> for Match {
+impl From<u8> for Match {
     fn from(value: u8) -> Self {
         match value {
             b'X' => Self::Lose,
@@ -17,9 +18,9 @@ impl std::convert::From<u8> for Match {
     }
 }
 
-impl std::convert::Into<u8> for Match {
-    fn into(self) -> u8 {
-        match self {
+impl From<Match> for u8 {
+    fn from(value: Match) -> u8 {
+        match value {
             Match::Lose => 0,
             Match::Tie => 3,
             Match::Win => 6,
@@ -33,7 +34,7 @@ enum RPC {
     Scissors,
 }
 
-impl std::convert::From<u8> for RPC {
+impl From<u8> for RPC {
     fn from(value: u8) -> Self {
         match value {
             b'A' | b'X' => RPC::Rock,
@@ -44,9 +45,9 @@ impl std::convert::From<u8> for RPC {
     }
 }
 
-impl std::convert::Into<u8> for RPC {
-    fn into(self) -> u8 {
-        match self {
+impl From<RPC> for u8 {
+    fn from(value: RPC) -> u8 {
+        match value {
             RPC::Rock => 1,
             RPC::Paper => 2,
             RPC::Scissors => 3,
@@ -54,7 +55,7 @@ impl std::convert::Into<u8> for RPC {
     }
 }
 
-fn part_1(input: String) -> u32 {
+fn part_1(input: &str) -> u32 {
     input
         .lines()
         .map(|l| {
@@ -80,7 +81,7 @@ fn part_1(input: String) -> u32 {
         .sum()
 }
 
-fn part_2(input: String) -> u32 {
+fn part_2(input: &str) -> u32 {
     input
         .lines()
         .map(|l| {
@@ -108,28 +109,25 @@ fn part_2(input: String) -> u32 {
 
 fn main() {
     let input = read_to_string("input.txt").expect("File to exist");
-    println!("{}", part_1(input.clone()));
-    println!("{}", part_2(input))
+    println!("{}", part_1(&input));
+    println!("{}", part_2(&input))
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
+    static INPUT: &str = "A Y
+B X
+C Z";
+
     #[test]
     fn part_1_example() {
-        let str = r#"A Y
-B X
-C Z"#;
-        assert_eq!(part_1(str.to_string()), 15);
+        assert_eq!(part_1(INPUT), 15);
     }
 
     #[test]
     fn part_2_example() {
-        let str = r#"A Y
-B X
-C Z"#;
-
-        assert_eq!(part_2(str.to_string()), 12);
+        assert_eq!(part_2(INPUT), 12);
     }
 }
