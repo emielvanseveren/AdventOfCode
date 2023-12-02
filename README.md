@@ -5,8 +5,8 @@ training, university coursework, practice problems, or to challenge each other.
 
 (Advent of code - 2020)
 
-https://adventofcode.com/2021
+https://adventofcode.com/2023
 
 - Go (2020)
-- Rust (2021)
+- Rust (2021, 2022, 2023)
 
