@@ -8,3 +8,5 @@ authors= ["Emiel Van Severen <emiel@vanseveren.dev>"]
 itertools = "0.10.5"
 anyhow = "1.0.66"
 regex = "1.7.0"
+fixedbitset = "0.4.2"
+ndarray = "0.15.6"
