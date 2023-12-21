@@ -55,7 +55,7 @@ fn part_2(input: &str) -> usize {
 fn main() {
     let input = read_to_string("input.txt").unwrap();
     println!("Part 1: {}", part_1(&input));
-    println!("Part 1: {}", part_2(&input));
+    println!("Part 2: {}", part_2(&input));
 }
 
 #[cfg(test)]
