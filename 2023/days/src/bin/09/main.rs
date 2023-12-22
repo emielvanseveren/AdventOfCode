@@ -13,22 +13,17 @@ fn parse_input(input: &str) -> Vec<Vec<isize>> {
 
 fn solve(nums: &[isize]) -> isize {
     let mut ans = *nums.last().unwrap();
-    let mut diffs = nums
-        .windows(2)
-        .map(|pair| pair[1] - pair[0])
-        .collect::<Vec<isize>>();
+    let mut diffs: Vec<_> = nums.windows(2).map(|w| w[1] - w[0]).collect();
     ans += diffs.last().unwrap();
 
-    loop {
-        diffs = diffs
-            .windows(2)
-            .map(|pair| pair[1] - pair[0])
-            .collect::<Vec<isize>>();
-        if diffs[0] == diffs[1] && diffs.iter().all(|num| *num == 0) {
-            return ans;
+    while diffs.windows(2).any(|w| w[0] != w[1]) {
+        for i in 0..diffs.len() - 1 {
+            diffs[i] = diffs[i + 1] - diffs[i];
         }
-        ans += diffs.last().unwrap()
+        diffs.pop();
+        ans += diffs.last().unwrap();
     }
+    ans
 }
 
 fn part_1(nums: Vec<Vec<isize>>) -> isize {
