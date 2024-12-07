@@ -6,3 +6,4 @@ authors= ["Emiel Van Severen <emiel@vanseveren.dev>"]
 
 [dependencies]
 anyhow = "1"
+regex = "1"
